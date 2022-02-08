@@ -1,0 +1,28 @@
+[package]
+name = "sub-du"
+version = "0.1.0"
+authors = ["kianenigma <kian.peymani@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+codec = { package = "parity-scale-codec", version = "2.0.0", default-features = false, features = ["derive"] }
+async-std = { version = "1.9.0", features = ["attributes"] }
+jsonrpsee-types = { git = "https://github.com/paritytech/jsonrpsee", rev = "4025c0f67298ab7216214feac4e2c29ca9b24710" }
+jsonrpsee-http-client = { git = "https://github.com/paritytech/jsonrpsee", rev = "4025c0f67298ab7216214feac4e2c29ca9b24710" }
+jsonrpsee-ws-client = { git = "https://github.com/paritytech/jsonrpsee", rev = "4025c0f67298ab7216214feac4e2c29ca9b24710" }
+separator = "0.4.1"
+ansi_term = "0.12.1"
+env_logger = "0.7.1"
+log = "0.4.11"
+structopt = { version = "0.3" }
+
+sub-storage = { path = "../sub-storage", features = ["helpers"] }
+frame-metadata = { version = "13.0.0" }
+
+[features]
+default = []
+remote-test-kusama = []
+remote-test-polkadot = []
+
+[dev-dependencies]
+assert_cmd = "1.0.1"

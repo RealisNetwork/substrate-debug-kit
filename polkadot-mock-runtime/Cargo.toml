@@ -1,0 +1,29 @@
+[package]
+name = "mock-runtime"
+version = "0.1.0"
+authors = ["kianenigma <kian.peymani@gmail.com>"]
+edition = "2018"
+
+[workspace]
+
+[dependencies]
+async-std = { version = "1.9.0", features = ["attributes"] }
+codec = { package = "parity-scale-codec", version = "2.0.0", default-features = false, features = ["derive"] }
+log = "0.4.11"
+env_logger = "0.7.1"
+hex-literal = "0.3.1"
+separator = "0.4.1"
+
+sp-runtime = { version = "3.0.0" }
+sp-core = { version = "3.0.0" }
+frame-support = { version = "3.0.0" }
+frame-system = { version = "3.0.0" }
+
+# Add any other pallet that you might want to test here.
+pallet-society = { version = "3.0.0" }
+pallet-staking = { version = "3.0.0" }
+pallet-balances = { version = "3.0.0" }
+pallet-transaction-payment = { version = "3.0.0" }
+frame-election-provider-support = { git = "https://github.com/paritytech/substrate", branch = "master" }
+pallet-election-provider-multi-phase = { git = "https://github.com/paritytech/substrate", branch = "master" }
+
